@@ -10,16 +10,18 @@ namespace CSharp6LangaugeFeature
     {
         public void NullCondtionFunctionality()
         {
-            Title title = null;
+            // Pervious way to check the null functionality
+            string title = null;
             Post post = null;
             if (post != null)
-                title = post.Title
+                title = post.Title;
+
+            // New way to check the null functionality
+
+            title = post?.Title;
         }
     }
 
-    internal class Title
-    {
-    }
     public class Post
     {
         public string Title { get; set; }
